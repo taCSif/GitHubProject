@@ -1,11 +1,18 @@
-import React, { useState } from 'react';
-import { StyleSheet, SafeAreaView, View, Text, TextInput, TouchableOpacity } from 'react-native';
-import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
+import React, { useState } from "react";
+import {
+  StyleSheet,
+  SafeAreaView,
+  View,
+  Text,
+  TextInput,
+  TouchableOpacity,
+} from "react-native";
+import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
 
-export default function Example() {
+export default function Assignment() {
   const [assignmentForm, setAssignmentForm] = useState({
-    description: '',
-    dueDate: '', // changed to string
+    description: "",
+    dueDate: "", // changed to string
   });
 
   const createAssignment = () => {
@@ -14,10 +21,10 @@ export default function Example() {
       description,
       dueDate: new Date(dueDate),
     };
-    console.log('Created assignment:', assignment);
+    console.log("Created assignment:", assignment);
     setAssignmentForm({
-      description: '',
-      dueDate: '',
+      description: "",
+      dueDate: "",
     });
   };
 
@@ -61,7 +68,7 @@ export default function Example() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: "#fff",
   },
   scrollContainer: {
     flexGrow: 1,
@@ -71,18 +78,18 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 24,
-    fontWeight: 'bold',
+    fontWeight: "bold",
     marginBottom: 20,
-    textAlign: 'center',
+    textAlign: "center",
   },
   subtitle: {
     fontSize: 16,
-    color: '#555',
+    color: "#555",
     marginTop: 10,
   },
   input: {
-    backgroundColor: '#f2f2f2',
-    borderColor: '#ccc',
+    backgroundColor: "#f2f2f2",
+    borderColor: "#ccc",
     borderWidth: 1,
     borderRadius: 8,
     height: 40,
@@ -90,15 +97,15 @@ const styles = StyleSheet.create({
     marginTop: 5,
   },
   btn: {
-    backgroundColor: '#007AFF',
+    backgroundColor: "#007AFF",
     borderRadius: 8,
     marginTop: 20,
     padding: 15,
-    alignItems: 'center',
+    alignItems: "center",
   },
   btnText: {
-    color: '#fff',
+    color: "#fff",
     fontSize: 18,
-    fontWeight: 'bold',
+    fontWeight: "bold",
   },
 });

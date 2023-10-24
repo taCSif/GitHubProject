@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   StyleSheet,
   SafeAreaView,
@@ -6,17 +6,15 @@ import {
   Text,
   TextInput,
   TouchableOpacity,
-} from 'react-native';
+} from "react-native";
 
- function navigateToDashboardScreen({ navigation }) {
+export default function SignUp({ navigation }) {
   const navigateToDashboardScreen = () => {
-   console.log("anything")
-    navigation.navigate('DashboardScreen');
-  }};
-
-export default function SignUp({navigation  }) {
+    console.log("anything");
+    navigation.navigate("DashboardScreen");
+  };
   return (
-    <SafeAreaView style={{ flex: 1, backgroundColor: '#fff' }}>
+    <SafeAreaView style={{ flex: 1, backgroundColor: "#fff" }}>
       <View style={styles.container}>
         <View style={{ height: 100 }} />
 
@@ -41,13 +39,16 @@ export default function SignUp({navigation  }) {
             style={styles.input}
           />
 
-          <TouchableOpacity style={styles.btn}onPress={navigateToDashboardScreen}>
+          <TouchableOpacity
+            style={styles.btn}
+            onPress={navigateToDashboardScreen}
+          >
             <Text style={styles.btnText}>Sign up</Text>
           </TouchableOpacity>
 
           <Text style={styles.formFooter}>
-            Already have an account?{' '}
-            <Text style={{ textDecorationLine: 'underline' }}>Sign in</Text>
+            Already have an account?{" "}
+            <Text style={{ textDecorationLine: "underline" }}>Sign in</Text>
           </Text>
         </View>
       </View>
@@ -67,40 +68,40 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 29,
-    fontWeight: '700',
-    color: '#242424',
-    textAlign: 'center',
+    fontWeight: "700",
+    color: "#242424",
+    textAlign: "center",
     marginBottom: 12,
   },
   input: {
     height: 44,
-    backgroundColor: '#EFF1F5',
+    backgroundColor: "#EFF1F5",
     paddingHorizontal: 16,
     borderRadius: 12,
     fontSize: 15,
-    fontWeight: '500',
-    color: '#222',
+    fontWeight: "500",
+    color: "#222",
     marginBottom: 12,
   },
   btn: {
-    alignItems: 'center',
+    alignItems: "center",
     borderRadius: 8,
     paddingVertical: 10,
     paddingHorizontal: 20,
-    backgroundColor: '#007AFF',
+    backgroundColor: "#007AFF",
     marginTop: 24,
   },
   btnText: {
     fontSize: 16,
     lineHeight: 26,
-    fontWeight: '600',
-    color: 'white',
+    fontWeight: "600",
+    color: "white",
   },
   formFooter: {
     marginTop: 16,
     fontSize: 13,
-    fontWeight: '500',
-    color: '#454545',
-    textAlign: 'center',
+    fontWeight: "500",
+    color: "#454545",
+    textAlign: "center",
   },
 });

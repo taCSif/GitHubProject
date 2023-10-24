@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, SafeAreaView, View, Text, TouchableOpacity } from 'react-native';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 
-export default function SignIn({ navigation }) {
+export default function Inface({ navigation }) {
   const navigateToSignIn = () => {
     navigation.navigate('SignIn');
   };
