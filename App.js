@@ -4,7 +4,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import SignIn from './screen/SignIn'; 
 import SignUp from './screen/SignUp'; 
 import VirtualClass from './screen/virtualClass';
-import Inface from './screen/Inface';
+import inface from './screen/inface';
 import DashboardScreen from './screen/DashboardScreen'; 
 import Exam from './screen/Exam'; 
 import Assignment from './screen/Assignment'; 
@@ -16,7 +16,7 @@ function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="Inface" component={Inface} />
+        <Stack.Screen name="Inface" component={inface} />
         <Stack.Screen name="SignUp" component={SignUp} />
         <Stack.Screen name="DashboardScreen" component={DashboardScreen} />
         <Stack.Screen name="SignIn" component={SignIn} />
