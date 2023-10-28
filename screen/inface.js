@@ -15,13 +15,12 @@ export default function Inface({ navigation }) {
     <SafeAreaView style={styles.container}>
       <KeyboardAwareScrollView contentContainerStyle={styles.scrollContainer}>
         <View style={styles.form}>
-          <View style={{ height: 400 }} />
-          <Text style={styles.t}>Live Classes, educator access, assessments, discussions, and progress tracking for interactive online learning.</Text>
-          <TouchableOpacity style={styles.btn} onPress={navigateToSignUp}>
-            <Text style={styles.btnText}>Sign Up</Text>
+          <Text style={styles.title}>Live Classes, educator access, assessments, discussions, and progress tracking for interactive online learning.</Text>
+          <TouchableOpacity style={[styles.button, styles.signUpButton]} onPress={navigateToSignUp}>
+            <Text style={styles.buttonText}>Sign Up</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.btn} onPress={navigateToSignIn}>
-            <Text style={styles.btnText}>Log In</Text>
+          <TouchableOpacity style={[styles.button, styles.signInButton]} onPress={navigateToSignIn}>
+            <Text style={styles.buttonText}>Log In</Text>
           </TouchableOpacity>
         </View>
       </KeyboardAwareScrollView>
@@ -32,30 +31,41 @@ export default function Inface({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#153944',
+    justifyContent: 'center',
   },
   scrollContainer: {
     flexGrow: 1,
+    justifyContent: 'center',
   },
   form: {
     padding: 20,
   },
-  t: {
-    color: 'black',
-    fontSize: 20,
+  title: {
+    color: '#f8fcfd',
+    fontSize: 24,
     fontWeight: 'bold',
     textAlign: 'center',
-    textDecorationStyle: 'double',
+    marginBottom: 20,
+    fontFamily: 'Cochin', // This is an example. Replace with the font you want.
   },
-  btn: {
-    backgroundColor: '#007AFF',
-    borderRadius: 8,
-    marginTop: 20,
-    padding: 15,
+  button: {
+    borderRadius: 50,
+    paddingVertical: 15,
+    paddingHorizontal: 10,
     alignItems: 'center',
+    marginVertical: 10,
+    marginLeft: 30, // Added this
+    marginRight: 30, // Added this
   },
-  btnText: {
-    color: '#fff',
+  signUpButton: {
+    backgroundColor: '#eff4d9',
+  },
+  signInButton: {
+    backgroundColor: '#f4ecd9',
+  },
+  buttonText: {
+    color: '#153944',
     fontSize: 18,
     fontWeight: 'bold',
   },
